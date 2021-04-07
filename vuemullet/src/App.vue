@@ -1,15 +1,11 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <font-awesome-icon icon="user-secret" />
-    <font-awesome-icon icon="home" />
-    <quick-menu :menu-count=count :icon-class=icons :menu-url-list=list :position="position"></quick-menu>
+    <quick-menu :menu-count=count :icon-class=icons :color=color :menu-url-list=list :backgroundColor=background :position="position"></quick-menu>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 //https://github.com/AshleyLv/vue-quick-menu
 import quickMenu from "vue-quick-menu";
 
@@ -25,18 +21,20 @@ export default {
         { isLink: false },
         { isLink: false }
       ],
+      background: '#1F191A',
+      color: '#F9E2C0',
       position: "top-left",
       isOpenNewTab: false
     };
   },
   components: {
-    HelloWorld,
     quickMenu
   },
 }
 </script>
 
 <style>
+/*APP STYLE*/
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -45,4 +43,33 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+/*------------------------------*/
+
+/* LOGIN BUTTON */
+
+.loginButton {
+  box-shadow:inset 0px 1px 0px 0px #6b463a;
+  background:linear-gradient(to bottom, #381207 5%, #4a1207 100%);
+  background-color:#381207;
+  border-radius:3px;
+  border:1px solid #5e1709;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Impact;
+  font-size:28px;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #6b3822;
+}
+.loginButton:hover {
+  background:linear-gradient(to bottom, #4a1207 5%, #381207 100%);
+  background-color:#4a1207;
+}
+.loginButton:active {
+  position:relative;
+  top:1px;
+}
+/*---------------------------*/
+
 </style>
