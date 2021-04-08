@@ -7,7 +7,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import vuetify from './plugins/vuetify';
 import '@babel/polyfill'
-import 'roboto-fontface/css/roboto/roboto-fontface.css'
+//import 'roboto-fontface/css/roboto/roboto-fontface.css'
 
 library.add(faUserSecret)
 library.add(faHome)

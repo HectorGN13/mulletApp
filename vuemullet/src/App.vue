@@ -1,13 +1,19 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <quick-menu :menu-count=count :icon-class=icons :color=color :menu-url-list=list :backgroundColor=background :position="position"></quick-menu>
-  </div>
+  <v-app>
+    <v-content fluid>
+      <div id="app">
+        <!--<img alt="Vue logo" src="./assets/logo.png">-->
+        <quick-menu :menu-count=count :icon-class=icons :color=color :menu-url-list=list :backgroundColor=background :position="position"></quick-menu>
+      <banner></banner>
+      </div>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
 //https://github.com/AshleyLv/vue-quick-menu
 import quickMenu from "vue-quick-menu";
+import banner from "./components/Banner";
 
 export default {
   name: 'App',
@@ -28,7 +34,8 @@ export default {
     };
   },
   components: {
-    quickMenu
+    quickMenu,
+    banner,
   },
 }
 </script>
@@ -41,11 +48,27 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+ /* margin-top: 60px;*/
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("./assets/background2.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+body {
+  background-color: black;
 }
 /*------------------------------*/
 
 /* LOGIN BUTTON */
+
+/*Background*/
+/*<a href="https://es.vecteezy.com/vectores-gratis/starburst">Starburst Vectores por Vecteezy</a>*/
 
 .loginButton {
   box-shadow:inset 0px 1px 0px 0px #6b463a;
