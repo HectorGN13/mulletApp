@@ -1,12 +1,13 @@
 <template>
   <v-app>
-    <v-content fluid>
+    <v-main fluid>
       <div id="app">
         <!--<img alt="Vue logo" src="./assets/logo.png">-->
         <quick-menu :menu-count=count :icon-class=icons :color=color :menu-url-list=list :backgroundColor=background :position="position"></quick-menu>
-      <banner></banner>
+        <banner></banner>
+        <my_footer></my_footer>
       </div>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 
@@ -14,6 +15,7 @@
 //https://github.com/AshleyLv/vue-quick-menu
 import quickMenu from "vue-quick-menu";
 import banner from "./components/Banner";
+import my_footer from "./components/Myfooter";
 
 export default {
   name: 'App',
@@ -36,6 +38,7 @@ export default {
   components: {
     quickMenu,
     banner,
+    my_footer,
   },
 }
 </script>
