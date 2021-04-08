@@ -10,15 +10,14 @@
                 md="2"
                 class="ml-auto mt-9"
             >
-            <button_login class="hidden-md-and-down loginButton"></button_login>
+            <button_login class="hidden-sm-and-down loginButton"></button_login>
             </v-col>
           </v-row>
-          <v-row align="end">
-            <v-col
-                md="2"
-                class="ml-auto mt-9"
-            >
-              <button_login class="loginButton"></button_login>
+        </v-container>
+        <v-container id="posicionAbajo" class="mb-16 pb-16">
+          <v-row justify="end">
+            <v-col md="2" class="ml-auto mt-9">
+              <button_login class="hidden-md-and-up loginButton"></button_login>
             </v-col>
           </v-row>
         </v-container>
@@ -75,7 +74,7 @@ export default {
   margin-right: 0;
   width: 100%;
   min-height: 100vh;
-  background-image: url("./assets/background4.jpg");
+  background-image: url("./assets/background5.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -90,10 +89,18 @@ body {
 
 /*Background*/
 /*<a href="https://es.vecteezy.com/vectores-gratis/starburst">Starburst Vectores por Vecteezy</a>*/
-
+/*Font*/
 @import url('http://fonts.cdnfonts.com/css/ifc-insane-rodeo');
 
 .loginButton {font-family: 'IFC INSANE RODEO', sans-serif;}
+
+/*Mobile version*/
+#posicionAbajo{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
 /*---------------------------*/
 

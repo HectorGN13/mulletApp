@@ -18,11 +18,6 @@ export default {
   name: "my_footer",
   data: () => ({
     icon: 'fab fa-github',
-    icons: [
-      'mdi-facebook',
-      'mdi-twitter',
-      'mdi-instagram',
-    ],
   }),
 }
 </script>
