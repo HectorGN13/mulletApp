@@ -4,7 +4,25 @@
       <div id="app">
         <!--<img alt="Vue logo" src="./assets/logo.png">-->
         <quick-menu :menu-count=count :icon-class=icons :color=color :menu-url-list=list :backgroundColor=background :position="position"></quick-menu>
-        <banner></banner>
+        <v-container>
+          <v-row>
+            <v-col
+                md="2"
+                class="ml-auto mt-9"
+            >
+            <button_login class="hidden-md-and-down loginButton"></button_login>
+            </v-col>
+          </v-row>
+          <v-row align="end">
+            <v-col
+                md="2"
+                class="ml-auto mt-9"
+            >
+              <button_login class="loginButton"></button_login>
+            </v-col>
+          </v-row>
+        </v-container>
+
         <my_footer></my_footer>
       </div>
     </v-main>
@@ -14,8 +32,8 @@
 <script>
 //https://github.com/AshleyLv/vue-quick-menu
 import quickMenu from "vue-quick-menu";
-import banner from "./components/Banner";
 import my_footer from "./components/Myfooter";
+import button_login from "./components/ButtonLogin";
 
 export default {
   name: 'App',
@@ -29,7 +47,7 @@ export default {
         { isLink: false },
         { isLink: false }
       ],
-      background: '#1F191A',
+      background: '#111010',
       color: '#F9E2C0',
       position: "top-left",
       isOpenNewTab: false
@@ -37,8 +55,8 @@ export default {
   },
   components: {
     quickMenu,
-    banner,
     my_footer,
+    button_login,
   },
 }
 </script>
@@ -57,7 +75,7 @@ export default {
   margin-right: 0;
   width: 100%;
   min-height: 100vh;
-  background-image: url("./assets/background2.jpg");
+  background-image: url("./assets/background4.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -73,29 +91,10 @@ body {
 /*Background*/
 /*<a href="https://es.vecteezy.com/vectores-gratis/starburst">Starburst Vectores por Vecteezy</a>*/
 
-.loginButton {
-  box-shadow:inset 0px 1px 0px 0px #6b463a;
-  background:linear-gradient(to bottom, #381207 5%, #4a1207 100%);
-  background-color:#381207;
-  border-radius:3px;
-  border:1px solid #5e1709;
-  display:inline-block;
-  cursor:pointer;
-  color:#ffffff;
-  font-family:Impact;
-  font-size:28px;
-  padding:6px 24px;
-  text-decoration:none;
-  text-shadow:0px 1px 0px #6b3822;
-}
-.loginButton:hover {
-  background:linear-gradient(to bottom, #4a1207 5%, #381207 100%);
-  background-color:#4a1207;
-}
-.loginButton:active {
-  position:relative;
-  top:1px;
-}
+@import url('http://fonts.cdnfonts.com/css/ifc-insane-rodeo');
+
+.loginButton {font-family: 'IFC INSANE RODEO', sans-serif;}
+
 /*---------------------------*/
 
 </style>
