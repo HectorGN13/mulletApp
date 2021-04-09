@@ -9,11 +9,11 @@
         @click="visibility = true"
         x-large
     >
-      LOG IN
+      Login
     </v-btn>
     <!-- Dialog -->
     <v-dialog v-model="visibility" width="800px" persistent>
-      <v-card>
+      <v-card id="login_form">
         <v-card-title>Titulo </v-card-title>
         <v-card-text>
           <v-container>
@@ -38,16 +38,6 @@
                   @blur="$v.email.$touch()"
               ></v-text-field>
             </v-row>
-          <v-row>
-            <v-checkbox
-                v-model="checkbox"
-                :error-messages="checkboxErrors"
-                label="Do you agree?"
-                required
-                @change="$v.checkbox.$touch()"
-                @blur="$v.checkbox.$touch()"
-            ></v-checkbox>
-          </v-row>
           </v-container>
         </v-card-text>
         <v-divider></v-divider>
@@ -79,11 +69,6 @@ export default {
   validations: {
     name: { required, maxLength: maxLength(10) },
     email: { required, email },
-    checkbox: {
-      checked (val) {
-        return val
-      },
-    },
   },
 
   data () {
@@ -91,7 +76,6 @@ export default {
       visibility: false,
       name: '',
       email: '',
-      checkbox: false,
     };
   },
 

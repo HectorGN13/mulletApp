@@ -91,8 +91,10 @@ body {
 /*<a href="https://es.vecteezy.com/vectores-gratis/starburst">Starburst Vectores por Vecteezy</a>*/
 /*Font*/
 @import url('http://fonts.cdnfonts.com/css/ifc-insane-rodeo');
-
+@import url('http://fonts.cdnfonts.com/css/aisha-script');
+/*font-family: 'Aisha Script', sans-serif;*/
 .loginButton {font-family: 'IFC INSANE RODEO', sans-serif;}
+
 
 /*Mobile version*/
 #posicionAbajo{
@@ -100,6 +102,19 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+/*---------------------------*/
+
+/* LOGIN FORM */
+
+#login_form {
+  background-image: url("./assets/ribete2.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  height: auto;
+  width: auto;
 }
 
 /*---------------------------*/
