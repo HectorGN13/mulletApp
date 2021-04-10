@@ -25,23 +25,32 @@
           <v-container class="px-10">
             <v-row>
               <v-text-field
-                  v-model="name"
-                  :error-messages="nameErrors"
-                  :counter="10"
-                  label="Name"
+                  name="email"
+                  id="email"
+                  v-model="email"
+                  prepend-inner-icon="fas fa-envelope"
+                  :error-messages="emailErrors"
+                  label="E-mail"
+                  type="email"
                   required
-                  @input="$v.name.$touch()"
-                  @blur="$v.name.$touch()"
+                  @input="$v.email.$touch()"
+                  @blur="$v.email.$touch()"
               ></v-text-field>
             </v-row>
             <v-row>
               <v-text-field
-                  v-model="email"
-                  :error-messages="emailErrors"
-                  label="E-mail"
+                  name="password"
+                  id="password"
+                  v-model="password"
+                  prepend-inner-icon="fas fa-key"
+                  :append-icon="value ? 'fas fa-eye' : 'fas fa-eye-slash'"
+                  @click:append="() => (value = !value)"
+                  :error-messages="passwordErrors"
+                  label="Password"
+                  :type="value ? 'password' : 'text'"
                   required
-                  @input="$v.email.$touch()"
-                  @blur="$v.email.$touch()"
+                  @input="$v.password.$touch()"
+                  @blur="$v.password.$touch()"
               ></v-text-field>
             </v-row>
           </v-container>
@@ -67,31 +76,31 @@
 
 <script>
 import { validationMixin } from 'vuelidate'
-import { required, maxLength, email } from 'vuelidate/lib/validators'
+import { required, email } from 'vuelidate/lib/validators'
 
 export default {
   name: 'button_login',
   mixins: [validationMixin],
 
   validations: {
-    name: { required, maxLength: maxLength(10) },
+    password: { required,},
     email: { required, email },
   },
 
   data () {
     return {
       visibility: false,
-      name: '',
+      password: '',
       email: '',
+      value: String,
     };
   },
 
   computed: {
-    nameErrors () {
+    passwordErrors () {
       const errors = []
-      if (!this.$v.name.$dirty) return errors
-      !this.$v.name.maxLength && errors.push('Name must be at most 10 characters long')
-      !this.$v.name.required && errors.push('Name is required.')
+      if (!this.$v.password.$dirty) return errors
+      !this.$v.password.required && errors.push('Password is required.')
       return errors
     },
     emailErrors () {
