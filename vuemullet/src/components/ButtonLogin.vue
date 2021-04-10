@@ -12,11 +12,17 @@
       Login
     </v-btn>
     <!-- Dialog -->
-    <v-dialog v-model="visibility" width="800px" persistent>
+    <v-dialog v-model="visibility" width="500px">
       <v-card id="login_form">
-        <v-card-title>Titulo </v-card-title>
+        <v-container>
+          <v-row>
+            <v-spacer></v-spacer>
+            <v-img class="mb-6 mt-4" src="../assets/welcome2.png" max-height="150" max-width="150"></v-img>
+            <v-spacer></v-spacer>
+          </v-row>
+        </v-container>
         <v-card-text>
-          <v-container>
+          <v-container class="px-10">
             <v-row>
               <v-text-field
                   v-model="name"
@@ -40,17 +46,18 @@
             </v-row>
           </v-container>
         </v-card-text>
-        <v-divider></v-divider>
         <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn @click="visibility = false">CLOSE</v-btn>
-          <v-spacer></v-spacer>
-          <v-btn
-              class="mr-4"
-              @click="submit"
-          >
-            submit
-          </v-btn>
+          <v-container class="px-10 my-4">
+            <v-btn
+                color="#332D2E"
+                backgroundColor="#FAF6E6"
+                class="loginButton special--text"
+                large
+                @click="submit"
+            >
+              submit
+            </v-btn>
+          </v-container>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -141,5 +148,9 @@ export default {
 
 .v-btn.v-size--x-large {
   font-size: 3rem;
+}
+
+.v-btn.v-size--large {
+  font-size: 2rem;
 }
 </style>
