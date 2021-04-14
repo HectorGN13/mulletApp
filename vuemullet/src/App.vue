@@ -22,6 +22,8 @@
           </v-row>
         </v-container>
 
+        <router-view></router-view>
+
         <my_footer></my_footer>
       </div>
     </v-main>
@@ -42,8 +44,8 @@ export default {
       icons: ["fas fa-cut","fas fa-map-marked-alt","fas fa-camera-retro","fa fa-envelope"],
       list: [
         { isLink: false },
-        { isLink: false },
-        { isLink: false },
+        { isLink: true, url:"/doo" },
+        { isLink: true, url:"/foo" },
         { isLink: false }
       ],
       background: '#111010',
