@@ -1,17 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../App'
 import doo from '@/components/doo.vue'
 import foo from '@/components/foo.vue'
+//import instaFeed from '../views/Instagram'
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
+ // { path: '/instagram', component: instaFeed },
   { path: '/foo', component: foo },
   { path: '/doo', component: doo }
 ]

@@ -4,20 +4,20 @@
       <div id="app">
         <!--<img alt="Vue logo" src="./assets/logo.png">-->
         <quick-menu :menu-count=count :icon-class=icons :color=color :menu-url-list=list :backgroundColor=background :position="position"></quick-menu>
-        <v-container>
+        <v-container class="hidden-sm-and-down">
           <v-row>
             <v-col
                 md="2"
                 class="ml-auto mt-9"
             >
-            <button_login class="hidden-sm-and-down loginButton"></button_login>
+            <button_login class="loginButton"></button_login>
             </v-col>
           </v-row>
         </v-container>
-        <v-container id="posicionAbajo" class="mb-16 pb-16">
+        <v-container id="posicionAbajo" class="mb-16 pb-16 hidden-md-and-up">
           <v-row justify="end">
             <v-col md="2" class="ml-auto mt-9">
-              <button_login class="hidden-md-and-up loginButton"></button_login>
+              <button_login class="loginButton"></button_login>
             </v-col>
           </v-row>
         </v-container>
@@ -46,6 +46,7 @@ export default {
         { isLink: false },
         { isLink: true, url:"/doo" },
         { isLink: true, url:"/foo" },
+        //{ isLink: true, url:"/instagram" },
         { isLink: false }
       ],
       background: '#111010',

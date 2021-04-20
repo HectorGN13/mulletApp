@@ -1,0 +1,37 @@
+<instafeed
+    token="{IGQVJWdWV6Y093cTdhdHpfQTFmd2dFT21UMHBKNkY1OGtwaGpoVF9kXzJIa0RXT3loS25weEllNm9PUUYwbjBfUlpCREI5aTlwbTREYndfWWU5QzRCMVc5VkZAhRVQ2RjRiT05GOVl2d3hNMUJwekpTWQZDZD}"
+    fields="media_url,media_type,caption,permalink"
+    container-class="image-container"
+    :mediatypes="['IMAGE']"
+>
+<template v-slot:loading="props">
+  <h1 v-if="props.loading" class="fancy-loading">
+    Loading, please wait...
+  </h1>
+</template>
+
+<template v-slot:feeds="props">
+  <a :href="props.feed.permalink" rel="noopener" target="_blank">
+    <div class="instagram-image">
+      <img :src="props.feed.media_url" alt="Instagram post">
+      <div :text="props.feed.caption" />
+    </div>
+  </a>
+</template>
+
+<template v-slot:error="props">
+  <div class="fancy-alert">
+    {{ props.error }}
+  </div>
+</template>
+</instafeed>
+<script>
+import instafeed from "../components/instaFeed"
+
+export default {
+  components: {
+    instafeed,
+  }
+}
+
+</script>
