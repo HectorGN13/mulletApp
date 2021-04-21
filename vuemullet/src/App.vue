@@ -47,7 +47,7 @@ export default {
         { isLink: true, url:"/doo" },
         { isLink: true, url:"/foo" },
         //{ isLink: true, url:"/instagram" },
-        { isLink: false }
+        { isLink: true, url:"/contact"}
       ],
       background: '#111010',
       color: '#F9E2C0',
@@ -122,4 +122,16 @@ body {
 
 /*---------------------------*/
 
+/* CONTACT FORM */
+
+#contact_form {
+  background-image: url("./assets/ribete2.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  height: auto;
+  width: auto;
+}
+
+/*---------------------------*/
 </style>

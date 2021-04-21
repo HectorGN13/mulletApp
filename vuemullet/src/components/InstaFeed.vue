@@ -34,7 +34,7 @@ export default {
      */
     count: {
       type: Number,
-      default: 6
+      default: 8
     },
     /*
      * Kinds of media to filter (Can be IMAGE, VIDEO, or CAROUSEL_ALBUM.).
