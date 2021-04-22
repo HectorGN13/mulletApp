@@ -4,7 +4,8 @@
       <v-card-text class="py-2 white--text text-center">
         MulletApp ©
         {{ new Date().getFullYear() }} —
-        <strong>Desarrollado por HectorGN13 </strong>
+        <strong>Desarrollado por <a href="https://github.com/HectorGN13" style="color: white; text-decoration: none;"
+>HectorGN13 </a> </strong>
         <v-icon size="24px">
           {{ icon }}
         </v-icon>

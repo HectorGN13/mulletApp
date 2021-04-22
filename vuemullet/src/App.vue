@@ -3,7 +3,7 @@
     <v-main fluid>
       <div id="app">
         <!--<img alt="Vue logo" src="./assets/logo.png">-->
-        <quick-menu :menu-count=count :icon-class=icons :color=color :menu-url-list=list :backgroundColor=background :position="position"></quick-menu>
+        <quick-menu :menu-count=count :icon-class=icons :color=color :menu-url-list=list :backgroundColor=background :position="position" style="z-index: 3"></quick-menu>
         <v-container class="hidden-sm-and-down">
           <v-row>
             <v-col
@@ -125,13 +125,21 @@ body {
 /* CONTACT FORM */
 
 #contact_form {
-  background-image: url("./assets/ribete2.jpg");
+  background-image: url("./assets/wallpaper_contact.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   height: auto;
   width: auto;
+  z-index: 1;
 }
 
+.contact_form_button {font-family: 'IFC INSANE RODEO', sans-serif;}
+.contact_title {
+  font-family: 'IFC INSANE RODEO', sans-serif;
+  font-size: 3em;
+  font-weight: normal;
+
+}
 /*---------------------------*/
 </style>
